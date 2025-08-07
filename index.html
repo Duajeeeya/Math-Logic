@@ -1,99 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Header with Menu</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Math Content Creator</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
     body {
-      font-family: Arial, sans-serif;
+      margin: 0;
+      font-family: 'Montserrat', sans-serif;
+      background: #f4f4f4;
+      color: #333;
     }
 
     header {
-      background-color: #333;
-      color: #fff;
+      background: linear-gradient(135deg, #004080, #0066cc);
+      color: white;
+      text-align: center;
+      padding: 60px 20px;
+    }
+
+    header h1 {
+      font-size: 3em;
+      margin: 0;
+    }
+
+    header p {
+      font-size: 1.2em;
+      margin-top: 10px;
+    }
+
+    .hero {
       display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 15px 30px;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 40px 20px;
+      background: white;
     }
 
-    .logo {
-      font-size: 24px;
-      font-weight: bold;
+    .feature {
+      flex: 1 1 300px;
+      max-width: 300px;
+      background: #fff;
+      margin: 20px;
+      padding: 20px;
+      border-left: 5px solid #004080;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      border-radius: 8px;
+      transition: transform 0.3s;
     }
 
-    nav ul {
-      list-style: none;
-      display: flex;
-      gap: 20px;
+    .feature:hover {
+      transform: scale(1.03);
     }
 
-    nav ul li a {
-      color: #fff;
-      text-decoration: none;
-      font-size: 16px;
-      transition: color 0.3s;
+    .feature h3 {
+      color: #004080;
+      margin-top: 10px;
     }
 
-    nav ul li a:hover {
-      color: #00aced;
+    .feature p {
+      font-size: 0.95em;
     }
 
-    /* Responsive for smaller screens */
-    @media (max-width: 600px) {
-      nav ul {
+    .icon {
+      font-size: 40px;
+      margin-bottom: 10px;
+      color: #0066cc;
+    }
+
+    @media screen and (max-width: 768px) {
+      header h1 {
+        font-size: 2em;
+      }
+      .hero {
         flex-direction: column;
-        background-color: #444;
-        position: absolute;
-        top: 60px;
-        right: 0;
-        width: 200px;
-        display: none;
-        padding: 15px;
+        align-items: center;
       }
-
-      nav ul.show {
-        display: flex;
-      }
-
-      .menu-toggle {
-        display: block;
-        cursor: pointer;
-      }
-    }
-
-    .menu-toggle {
-      display: none;
-      font-size: 24px;
     }
   </style>
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script> <!-- For icons -->
 </head>
 <body>
 
-  <header>
-    <div class="logo">MySite</div>
-    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
-    <nav>
-      <ul id="nav-list">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Services</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+<header>
+  <h1>Jane Doe</h1>
+  <p>📘 Math Content Creator | Educator | Visual Thinker</p>
+</header>
 
-  <script>
-    function toggleMenu() {
-      document.getElementById("nav-list").classList.toggle("show");
-    }
-  </script>
+<section class="hero">
+  <div class="feature">
+    <div class="icon"><i class="fas fa-brain"></i></div>
+    <h3>Concept Explainer</h3>
+    <p>I create visuals and animations to explain complex math topics like calculus, algebra, and number theory.</p>
+  </div>
+  
+  <div class="feature">
+    <div class="icon"><i class="fas fa-chalkboard-teacher"></i></div>
+    <h3>Online Tutor</h3>
+    <p>1-on-1 tutoring sessions for high school and college students — with interactive whiteboards and math software.</p>
+  </div>
+
+  <div class="feature">
+    <div class="icon"><i class="fas fa-video"></i></div>
+    <h3>Video Lessons</h3>
+    <p>I produce engaging short videos on math hacks, problem-solving strategies, and exam tips.</p>
+  </div>
+</section>
 
 </body>
 </html>
